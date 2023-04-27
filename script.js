@@ -13,7 +13,7 @@ function init(){
     console.log('Esto se ejecuta solo cuando se carga la pagina web')
 }
 
-const   BOTON = document.getElementById("guess-button");
+const BOTON = document.getElementById("guess-button");
 BOTON.addEventListener("click", intentar);
 
 function leerIntento(){
