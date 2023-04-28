@@ -22,12 +22,10 @@ function leerIntento(){
 }
 function intentar(){
     const INTENTO = leerIntento();
-    if (INTENTO === palabra) {
-        terminar("<h1>GANASTE!😀</H1>")
-        return
-    }
     const GRID = document.getElementById("grid");
-    const ROW = document.createElement('div');
+    const ROW = document.createElement('div'); 
+    
+    
     ROW.className = 'row';
     for (let i in palabra){
         const SPAN = document.createElement('span');
@@ -45,6 +43,10 @@ function intentar(){
         ROW.appendChild(SPAN)
     }
     GRID.appendChild(ROW)
+    if (INTENTO === palabra) {
+        terminar("<h1>GANASTE!😀</H1>")
+        return
+    }
 
     cantIntentos--;
     if (cantIntentos == 0){
